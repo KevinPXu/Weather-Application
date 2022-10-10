@@ -59,7 +59,7 @@ function todaysForecast(data) {
   );
   //adds attributes to the image tag created above to append the icon image
   todayIconEl.attr({ src: iconUrl, alt: "weather condition icon" });
-  $("#jumbo-title").append(todayIconEl);
+  jumboTitleEl.append(todayIconEl);
 
   //dynamically adds the temperature, wind, and humidity to the cards.
   var todayTempEl = $("<li>");
