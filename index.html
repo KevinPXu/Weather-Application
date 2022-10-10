@@ -23,9 +23,11 @@
     <header
       class="d-flex justify-content-center align-items-center my-3 header-container"
     >
+      <!-- Header tag that displays the name of the application at the top of the screen -->
       <h2 id="title">Weather Dashboard</h2>
     </header>
     <main class="row">
+      <!-- container for the search bar and the form needed to retrieve user input data -->
       <div class="search-container col-xl-3">
         <form class="user-form">
           <div class="input-group input-group-default">
@@ -55,9 +57,11 @@
         ></div>
       </div>
       <section class="col-xl-9">
+        <!-- start of the jumbotron bootstrap element on the page, appends several list elements from the javascript -->
         <div class="jumbotron jumbotron-fluid" id="container-today">
           <h1 class="display-5 mx-3" id="jumbo-title">Today's Weather</h1>
         </div>
+        <!-- container for the cards created dynamically in the javascript -->
         <div class="row" id="card-container"></div>
       </section>
     </main>
