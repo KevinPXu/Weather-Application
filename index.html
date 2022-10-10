@@ -17,36 +17,51 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
     />
     <link rel="stylesheet" href="./Assets/style.css" />
-    <title>Document</title>
+    <title>Weather Dashboard</title>
   </head>
   <body>
     <header
-      class="d-flex justify-content-center align-items-center my-3 container"
+      class="d-flex justify-content-center align-items-center my-3 header-container"
     >
-      <h2>Weather Dashboard</h2>
+      <h2 id="title">Weather Dashboard</h2>
     </header>
     <main class="row">
-      <form class="user-form col-xl-3">
-        <div class="input-group input-group-default">
-          <span class="input-group-text" id="inputGroup-sizing-default"
-            >Location</span
-          >
-          <input
-            type="text"
-            class="form-control"
-            id="location"
-            aria-label="Location input"
-            aria-describedby="inputGroup-sizing-lg"
-          />
-        </div>
-      </form>
+      <div class="search-container col-xl-3">
+        <form class="user-form">
+          <div class="input-group input-group-default">
+            <span class="input-group-text" id="inputGroup-sizing-default"
+              >Location</span
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="location"
+              aria-label="Location input"
+              aria-describedby="inputGroup-sizing-lg"
+            />
+            <button
+              type="submit"
+              name="submit"
+              class="btn btn-primary"
+              id="submitButton"
+            >
+              Search
+            </button>
+          </div>
+        </form>
+        <div
+          class="d-flex flex-column justify-content-center align-items-center"
+          id="search-history"
+        ></div>
+      </div>
       <section class="col-xl-9">
         <div class="jumbotron jumbotron-fluid" id="container-today">
           <h1 class="display-5 mx-3" id="jumbo-title">Today's Weather</h1>
         </div>
+        <div class="row" id="card-container"></div>
       </section>
     </main>
-    <section class="row" id="card-container"></section>
+
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./Assets/script.js"></script>
